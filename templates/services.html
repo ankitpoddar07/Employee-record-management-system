@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page Website</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Main container styling */
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Ordered list styles */
+        ol {
+            text-align: left;
+            margin: 20px auto;
+            padding-left: 20px;
+            max-width: 700px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        /* Button styles */
+        button {
+            margin-top: 50px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Include Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Main Content -->
+    <h1> Official Services </h1>
+
+    <!-- Ordered List -->
+    <ol>
+        <li>One or more servers to act as the host(s) for the sites; servers may be physical or virtual.</li>
+        <li>Colocation for the server(s), providing physical space, electricity, and Internet connectivity.</li>
+        <li>Domain Name System configuration to define name(s) for the sites and point them to the hosting server(s).</li>
+        <li>A web server running on the host.</li>
+    </ol>
+
+    <!-- Contact Us Button -->
+    <a href="https://www.instagram.com/ankitpoddar_"><button onclick="alert('Contact us functionality will go here')">Contact Us</button></a>
+</div>
+
+</body>
+</html>

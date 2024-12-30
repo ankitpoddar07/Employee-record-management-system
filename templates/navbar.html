@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation menu container */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        /* Styling for the unordered list */
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Styling for each list item */
+        li {
+            float: left; /* Arrange items horizontally */
+        }
+
+        /* Styling for links */
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        li a:hover {
+            background-color: #575757;
+        }
+
+        /* Clear floats */
+        ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="/index/">HOME</a></li>
+        <li><a href="/about/">ABOUT</a></li>
+        <li><a href="/services/">SERVICES</a></li>
+        <li><a href="/emp/home/">EMPLOYEE MANAGEMENT</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="/emp/feedback">FEEDBACK</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

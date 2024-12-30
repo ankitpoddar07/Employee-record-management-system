@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+
+        .dynamic-content h2, .dynamic-content h3 {
+            color: #333;
+        }
+
+        .dynamic-content h1 {
+            margin-top: 40px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Include Navbar -->
+    {% include 'navbar.html' %}
+    
+    <h1>Welcome to Our Official Website</h1>
+
+    <!-- Form Submission -->
+    <form action="/index/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="check" placeholder="Enter text">
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Description Paragraph -->
+    <p>
+        An employee record management system <b>(ERM)</b> is a digital system that helps businesses store, access, and manage employee records.<br>
+        The Employee Management System is a <b>Django-based</b> web application that allows users to manage employees within a company.
+        It provides functionality to <b>add, delete, edit, and filter employees</b> through a user-friendly interface. The system also includes a login functionality to ensure secure access to the website.
+    </p>
+
+    <!-- Contact Us Button -->
+    <a href="https://www.instagram.com/ankitpoddar_"><button>Contact Us</button></a>
+
+    <!-- Dynamic Content Section -->
+    {% if isActive %}
+    <div class="dynamic-content">
+        <h2>Today's Date: {{ date }}</h2>
+        <h2>Name: {{ name }}</h2>
+
+        <hr />
+
+        <h1>Student Data</h1>
+        <h2>Student Name: {{ student_data.student_name }}</h2>
+        <h2>Student College: {{ student_data.student_college }}</h2>
+        <h2>Student City: {{ student_data.student_city }}</h2>
+
+        <hr />
+
+        <h2>Favorite Programs:</h2>
+        {% for p in list_of_programs %}
+        <h3>{{ p }}</h3>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
